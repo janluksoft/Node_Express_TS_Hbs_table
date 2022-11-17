@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/default.css"/> 
+    <link rel="stylesheet" href="../css/style_fold.css"/> 
+    <title>{{zPageTitle}}</title>
+</head>
+<body>
+
+    <nav>
+      <div style="margin-bottom: 1px;">
+        <a class="men" href="/">Home</a>
+        <a class="men" href="table">Table</a>
+      </div>
+    </nav>
+
+  <div class="start">
+    <div class="box_right" style='float: right;'>
+      <table>
+        <tr>
+          <td>HBS<br/>template<br/>engine</td>
+          <td><img src='../images/Handlebars.png' width='100'/></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="main">{{zPageTitle}}</div>
+
+    {{#if zbIsTable }}
+    <p>This is a table from node server:</p>
+    <!--  {name: 'Kasia',sex: 'woman', age: 25},  -->
+    <table>
+     <tr>
+        <td>
+         <div class="table-responsive">
+          <table class="fold-table" style="width: 320px;">
+            <thead>
+                <tr> <th>Name</th><th>Sex</th><th>Age</th> </tr>
+            </thead>
+            <tbody>
+              {{#each ztNames}}
+                <tr class="view">
+                    <td>{{this.name}}</td><td>{{this.sex}}</td><td>{{this.age}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+         </div>
+
+        </td>
+        <td>
+            <ul class="people_list">
+            {{#each ztNames}}
+                <li>{{this.name}} ({{this.sex}})</li>
+            {{/each}}
+            </ul>
+        </td>
+     </tr>
+    </table>
+
+    {{else}}
+
+      <h2>The Node multipage web-app with Express, TS, Hbs engine</h2>
+      
+      <p>The Node application displays a table downloaded from the Node server.
+         The menu loads various pages from the server using routing methods.
+      </p>
+      <p>The application used:</p>
+      <ul>
+        <li>TypeScript language;</li>
+        <li>Express framework;</li>
+        <li>Built-in middleware: express.static</li>
+        <li>Hbs template engine</li>
+        <li>Hbs also displays variables from the server;</li>
+        <li>helpers: [#each], [#if]</li>
+      </ul>
+      
+      <p>The Table tab generates a table from the Node server<br/> to the browser page. 
+      Press position [Table] in menu</p>
+
+    {{/if}}
+
+    <br/>
+    <p style="color:#4e7cc8;">The page was loaded {{zCount}} times. Reload it</p>
+
+  </div>
+
+</body>
+</html>
