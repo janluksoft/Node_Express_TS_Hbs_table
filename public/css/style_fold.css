@@ -41,13 +41,3 @@ table.fold-table > tbody > tr.view th:first-child {
   position: relative;
   padding-left: 20px;
 }
-
-table.fold-table > tbody > tr.view td {
-    padding: 2px;
-    /* position: relative;
-    padding: 2px;
-    padding-left: 8px;
-    border: 1px solid;
-    border-color: #A0A; */
-    /*background: #b0b0b0; */
-}

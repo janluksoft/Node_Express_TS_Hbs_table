@@ -10,6 +10,8 @@ main {
     color: brown;
 }
 
+a {text-decoration: none; text-align: center;}
+
 p {
     padding: 4px 25px;
     margin: 0px;
@@ -21,21 +23,27 @@ h1, h2 {
     font-size: 13pt;
 }
 
+ul { padding: 0px 50px; margin: 8px; }
+
+nav {background-color: #113295; padding: 5px; }
+
+footer {
+    background-color: #808080;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 0px;
+    margin: 2px auto 0 auto;
+}
+
 .start {padding:10px 5px;}
 
 .main {
     padding: 0px 15px;
     font-size: 18pt;
     color: brown;
-}
-
-.in-txt {width: 110px;}
-
-ul { padding: 0px 50px; margin: 8px; }
-
-nav {
-    background-color: #113295;
-    padding: 5px;
 }
 
 .men {
@@ -52,57 +60,6 @@ nav {
     background-color: #4f6ec9;
     color: #081e60;
 }
-
-
-a {
-    text-decoration: none;
-    text-align: center;
-}
-
-footer {
-    background-color: #808080;
-    text-align: center;
-    color: white;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    padding: 0px;
-    margin: 2px auto 0 auto;
-}
-
-.headtop {
-    background-color: #2b4797;
-    margin: 0px;
-    padding: 5px;
-    padding-left: 20px;
-    vertical-align: inherit;
-    color: lightgray;
-    font-size: larger;
-}
-
-.box_main {
-    font-size: 11pt;
-    line-height: 120%;
-    padding: 10px;
-    margin: 12px;
-    border-radius: 6px;
-    border: 1px solid #2b4797;
-    background-color: #b5c3ee;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
-  }
-  
-  .box_frame {
-    padding: 4px;
-    margin: 12px;
-    width: 300px;
-    border-radius: 6px;
-    border: 1px solid #477062;
-  }
-  
-  .primary2 {
-    border-radius: 6px;
-    border: 1px solid #2b4797;
-  }
 
   .box_right {
     font-size: 12pt;
